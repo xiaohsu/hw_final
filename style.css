@@ -1,0 +1,88 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('src/imgs/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.content-wrapper {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+p {
+    margin-top: 1em;
+    font-size: 24px;
+    font-family: 'Nunito', sans-serif;
+}
+.social-icons {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.social-icons i {
+    margin: 0 20px;
+    font-size: 40px;
+    color: white;
+    transition: color 0.3s ease;
+}
+.social-icons i:hover {
+    color: #ffcc00;
+}
+/*.oops-text {
+    position: relative;
+    top: -680px;
+    left: 50%;
+    transform: translate(-50%, 450%);
+    font-size: 36px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}*/
+.ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+.ticker p {
+    display: inline-block;
+    margin-right: 30px;
+    animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.giphy-embed {
+    border: none; /* 移除邊框 */
+    width: 480px; /* 設置寬度 */
+    height: 270px; /* 設置高度 */
+}
+/* 播放音乐按钮样式 */
+#playButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 48px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+#playButton:hover {
+    transform: scale(1.1); /* 悬停时放大按钮 */
+}
